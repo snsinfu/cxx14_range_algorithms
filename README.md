@@ -22,8 +22,10 @@ If you need a more comprehensive range library, you may want to use
 
 ## Installation
 
-Copy range.hpp to the include directory of your project. Change file name
-and/or namespace as you like.
+Copy [range.hpp][range.hpp] to the include directory of your project. Change
+file name and/or namespace as you like.
+
+[range.hpp]: https://github.com/frickiericker/cxx14_range_algorithms/blob/master/range.hpp
 
 ## Usage
 
