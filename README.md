@@ -55,7 +55,7 @@ headers except for `random_shuffle` are provided.
 
 ## Testing
 
-Move to the tests directory and type following commands to run tests:
+Move to the repository root and type following commands to run tests:
 
     mkdir build
     cd build
