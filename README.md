@@ -1,8 +1,9 @@
-# range.hpp
+range.hpp
+=========
 
-| Language | License                    |
-|----------|----------------------------|
-| C++14    | Boost Software License 1.0 |
+![C++14][cxx-badge]
+[![Boost License][license-badge]](LICENSE.txt)
+[![Build Status][travis-badge]][travis-url]
 
 A single-file, header-only library of C++14 standard algorithms adapted to
 ranges.
@@ -52,3 +53,9 @@ Boost Software License, Version 1.0.
 
 License text is included in the header file. You don't need to copy license
 file (LICENSE.txt) into your project if you just use the header file.
+
+
+[cxx-badge]: https://img.shields.io/badge/C%2B%2B-14-orange.svg
+[license-badge]: http://img.shields.io/badge/license-Boost-blue.svg
+[travis-badge]: https://travis-ci.org/frickiericker/cxx14_range_algorithms.svg?branch=master
+[travis-url]: https://travis-ci.org/frickiericker/cxx14_range_algorithms
