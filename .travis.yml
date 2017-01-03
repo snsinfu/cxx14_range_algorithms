@@ -16,8 +16,8 @@ addons:
       - gcc-5
 
 script:
-  - [ "${CXX}" = "clang++" ] && CXX="clang++-3.8"
-  - [ "${CXX}" = "g++"     ] && CXX="g++-5"
+  - if [ "${CXX}" = "clang++" ]; then export CXX="clang++-3.8"; fi
+  - if [ "${CXX}" = "g++"     ]; then export CXX="g++-5";       fi
   - mkdir build
   - cd build
   - cmake .. -DCMAKE_CXX_COMPILER="${CXX}"
