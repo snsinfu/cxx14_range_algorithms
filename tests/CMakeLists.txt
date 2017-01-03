@@ -3,9 +3,7 @@
 
 cmake_minimum_required(VERSION 2.8.7)
 
-project(RangeHPP-Tests CXX)
-
-enable_testing()
+project(cxx14_range_algorithms_tests CXX)
 
 if(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Catch.git)
     execute_process(
