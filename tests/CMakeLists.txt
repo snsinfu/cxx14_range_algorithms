@@ -17,7 +17,11 @@ include_directories(
 )
 
 set(CMAKE_CXX_FLAGS
-    "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wpedantic -Wconversion -Wshadow")
+    "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -g -O1")
+
+set(SANITIZER "-fsanitize=address")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${SANITIZER}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${SANITIZER}")
 
 add_executable(
     unittest
