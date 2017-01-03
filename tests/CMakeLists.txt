@@ -19,7 +19,12 @@ include_directories(
 set(CMAKE_CXX_FLAGS
     "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -g -O1")
 
-set(SANITIZER "-fsanitize=address")
+# g++ on Travis CI seem to have problems with sanitizer.
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  set(SANITIZER "-fsanitize=address")
+else()
+  set(SANITIZER "")
+endif()
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${SANITIZER}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${SANITIZER}")
 
