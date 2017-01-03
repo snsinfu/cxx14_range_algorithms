@@ -1,8 +1,8 @@
 language: cpp
 
 compiler:
-  - clang++-3.8
-  - g++-5
+  - clang++
+  - g++
 
 addons:
   apt:
@@ -16,6 +16,8 @@ addons:
       - gcc-5
 
 script:
+  - [ "${CXX}" = "clang++" ] && CXX="clang++-3.8"
+  - [ "${CXX}" = "g++"     ] && CXX="g++-5"
   - mkdir build
   - cd build
   - cmake .. -DCMAKE_CXX_COMPILER="${CXX}"
