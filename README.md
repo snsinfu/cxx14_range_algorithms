@@ -27,11 +27,9 @@ Copy range.hpp to the include directory of your project.
 ## Use
 
 Include range.hpp and use algorithms in namespace `range`. Sequence algorithms
-in [algorithm](1) and [numeric](2) headers except for `random_shuffle` are
-provided.
-
-[1]: http://en.cppreference.com/w/cpp/header/algorithm
-[2]: http://en.cppreference.com/w/cpp/header/numeric
+in [algorithm](http://en.cppreference.com/w/cpp/header/algorithm) and
+[numeric](http://en.cppreference.com/w/cpp/header/numeric) headers except for
+`random_shuffle` are provided.
 
 ## Test
 
