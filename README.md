@@ -17,15 +17,15 @@ If you need a more comprehensive range library, you may want to use
 
 [cxx-badge]: https://img.shields.io/badge/C%2B%2B-14-orange.svg
 [license-badge]: http://img.shields.io/badge/license-Boost-blue.svg
-[travis-badge]: https://travis-ci.org/frickiericker/cxx14_range_algorithms.svg?branch=master
-[travis-url]: https://travis-ci.org/frickiericker/cxx14_range_algorithms
+[travis-badge]: https://travis-ci.org/snsinfu/cxx14_range_algorithms.svg?branch=master
+[travis-url]: https://travis-ci.org/snsinfu/cxx14_range_algorithms
 
 ## Installation
 
 Copy [range.hpp][range.hpp] to the include directory of your project. Change
 file name and/or namespace as you like.
 
-[range.hpp]: https://github.com/frickiericker/cxx14_range_algorithms/raw/master/range.hpp
+[range.hpp]: https://raw.githubusercontent.com/snsinfu/cxx14_range_algorithms/master/range.hpp
 
 ## Usage
 
