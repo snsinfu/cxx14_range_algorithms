@@ -3,17 +3,11 @@
 
 cmake_minimum_required(VERSION 2.8.7)
 
-project(cxx14_range_algorithms_tests CXX)
-
-if(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/Catch.git)
-    execute_process(
-        COMMAND git submodule update --init WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
-    )
-endif()
+project(cxx14_range_algorithms CXX)
 
 include_directories(
     ..
-    ./Catch.git/single_include
+    ./third_party/Catch2
 )
 
 set(CMAKE_CXX_FLAGS
@@ -69,4 +63,6 @@ add_executable(
     test_permutation_generators.cc
     test_generalized_numeric_operations.cc
 )
+
+enable_testing()
 add_test(unittest unittest)
