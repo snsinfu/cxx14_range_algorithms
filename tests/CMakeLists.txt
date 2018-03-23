@@ -1,29 +1,23 @@
 # Distributed under the Boost Software License, Version 1.0. (See accompanying
 # file LICENSE.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 3.1)
 
 project(cxx14_range_algorithms CXX)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 include_directories(
     ..
     ./third_party/Catch2
 )
 
-set(CMAKE_CXX_FLAGS
-    "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wpedantic -Wconversion -Wshadow -g -O1")
-
-# g++ on Travis CI seem to have problems with sanitizer.
-if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  set(SANITIZER "-fsanitize=address")
-else()
-  set(SANITIZER "")
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
+    set(CMAKE_CXX_FLAGS
+        "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wconversion -Wshadow")
 endif()
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${SANITIZER}")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${SANITIZER}")
 
-add_executable(
-    unittest
+add_executable(run
     unittest.cc
     test_range.cc
     test_all_of.cc
@@ -65,4 +59,4 @@ add_executable(
 )
 
 enable_testing()
-add_test(unittest unittest)
+add_test(unittest run)

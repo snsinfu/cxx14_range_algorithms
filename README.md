@@ -57,11 +57,11 @@ headers except for `random_shuffle` are provided.
 
 Move to the repository root and type following commands to run tests:
 
-    mkdir build
-    cd build
+    mkdir tests/build
+    cd tests/build
     cmake ..
-    make
-    ctest
+    cmake --build .
+    ./run
 
 Tested compilers are:
 
