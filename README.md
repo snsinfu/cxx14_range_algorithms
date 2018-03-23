@@ -65,9 +65,8 @@ Move to the repository root and type following commands to run tests:
 
 Tested compilers are:
 
-- g++ 4.9.4
-- clang++ 3.8.0 with libstdc++
-- clang++ 3.8.0 with libc++
+- g++ 7
+- clang++ 5.0 with libc++
 
 ## License
 
